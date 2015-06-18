@@ -1,7 +1,18 @@
 <div class="jumbotron">
    
+<div class="mainDiv ng-scope">
+  <form novalidate="" name="loginform"> 
+    <div class="form-group">
+      <input type="email" placeholder="Name" ng-model="username" ng-minlength="3" ng-maxlength="20" required class="form-control" name="loginform.name" style="">
+    </div> 
+    <div class="form-group"> 
+      <input type="password" placeholder="Password" ng-model="password" required class="form-control" name="loginform.password"> 
+    </div> 
+    <div class="form-group"> 
+      <button type="submit" class="btn btn-info form-control" ng-disabled="loginform.$invalid" ng-click="login()">Login</button> 
+    </div> 
+    </form>
+ </div>   
    
-   
-  <p><a class="btn btn-sm  btn-default" ng-href="#/">login!</a></p>
 </div>
  

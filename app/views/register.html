@@ -1,7 +1,19 @@
 <div class="jumbotron">
    
+<div class="mainDiv ng-scope">
+  <form novalidate="" name="regiterform"> 
+    <div class="form-group">
+      <input type="email" placeholder="Name" ng-model="username" ng-minlength="3" ng-maxlength="20" required class="form-control" name="regiterform.name" style="">
+    </div> 
+    <div class="form-group"> 
+      <input type="password" placeholder="Password" ng-model="password" required class="form-control" name="regiterform.password"> 
+    </div> 
+    <div class="form-group"> 
+      <button type="submit" class="btn btn-info form-control" ng-disabled="regiterform.$invalid" ng-click="register()">Register</button> 
+    </div> 
+    </form>
+    <span ng-bind-html="message"></span>
+ </div>   
    
-   
-  <p><a class="btn btn-sm  btn-default" ng-href="#/">Register</a></p>
 </div>
  

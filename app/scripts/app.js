@@ -28,10 +28,12 @@ angular
         url: '/',   
         views: { 
             'header': {
-                templateUrl: 'views/header.html'
+                templateUrl: 'views/header.html',
+                controller: 'HeaderController'
             },
             'content': {
-                templateUrl: 'views/login.html' 
+                templateUrl: 'views/login.html',
+                controller: 'LoginController'                 
             }   
         }                 
     })
@@ -39,22 +41,25 @@ angular
         url: '/register',   
         views: {
             'header': {
-                templateUrl: 'views/header.html'
+                templateUrl: 'views/header.html',
+                controller: 'HeaderController'
             }, 
             'content': {
-                templateUrl: 'views/register.html' 
+                templateUrl: 'views/register.html',
+                controller: 'RegisterController'   
             }   
         }                 
     })
-    .state('app',{
-        url: '/home/',
+    .state('dashboard',{
+        url: '/dashboard',
         views: {
             'header': {
-                templateUrl: 'views/header.html'
+                templateUrl: 'views/userHeader.html',
+                controller: 'UserheaderController'                
             },
             'content': {
-                templateUrl: 'views/content.html',
-                controller: 'ContentController'
+                templateUrl: 'views/dashboard.html',
+                controller: 'DashboardController'
             }
         }
     }) 
